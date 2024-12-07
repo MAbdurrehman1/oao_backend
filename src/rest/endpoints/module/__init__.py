@@ -1,0 +1,3 @@
+from .get_modules_list import get_modules_list_endpoint
+from .get_modules_urls import get_modules_urls_endpoint
+from .create_module_answer import create_module_answer_endpoint

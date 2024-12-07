@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS organizations (
+  id SERIAL PRIMARY KEY NOT NULL,
+  company_name VARCHAR(300) NOT NULL,
+  industry VARCHAR(500) NOT NULL,
+  hq_location VARCHAR(500) NOT NULL,
+  size VARCHAR(100) NOT NULL,
+  metadata JSONB,
+  created_at TIMESTAMP DEFAULT now() NOT NULL,
+  updated_at TIMESTAMP DEFAULT now() NOT NULL,
+  deleted_at TIMESTAMP DEFAULT NULL
+);

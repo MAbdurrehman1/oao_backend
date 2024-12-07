@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+RUN useradd -m -s /bin/bash appuser
+
+WORKDIR /src
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+COPY ./requirements.txt /src/requirements.txt
+
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
+
+COPY ./src /src
+
+RUN chown -R appuser:appuser /src
+
+USER appuser
+
+ENTRYPOINT ["celery", "-A", "celery_app", "worker", "--concurrency=5", "-B", "-E", "-l", "INFO"]

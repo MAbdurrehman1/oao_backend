@@ -1,0 +1,2 @@
+ALTER TABLE survey_campaigns
+ADD COLUMN invitation_sending_due_date TIMESTAMP;

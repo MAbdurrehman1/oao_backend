@@ -1,0 +1,2 @@
+from .create_report_goal import create_report_goal_endpoint
+from .get_report_goals import get_report_goals_endpoint

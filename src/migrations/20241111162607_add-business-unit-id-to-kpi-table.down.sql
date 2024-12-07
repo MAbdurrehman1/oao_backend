@@ -1,0 +1,1 @@
+ALTER TABLE report_kpis DROP COLUMN business_unit_id;

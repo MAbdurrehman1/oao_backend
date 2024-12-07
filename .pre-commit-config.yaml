@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 23.12.1  # Replace with the desired version of black
+    hooks:
+      - id: black
+        language_version: python3
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0  # Replace with the desired version of flake8
+    hooks:
+      - id: flake8
+
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        entry: "bash run_mypy.sh"
+        language: python
+        language_version: python3.11
+        types: [ python ]
+        require_serial: true  # this is for the command to be executed only once per sequence
+        verbose: true
