@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 160%;
+                font-size: 14px;
+                text-align: left;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Magic Login</h3>
+        <p>
+            Dear {{ first_name }},
+            <br /> 
+            Here is your one time login link, click to get logged-in:
+        </p>
+        <a href="{{ magic_link }}">Log-in</a>
+        <p style="opacity: 0.7;">
+            This link will expire in a week if not opened!
+            <br/>
+            If you've not requested a magic-login link, simply ignore this email.
+            <br />
+            <br />
+            Best,
+            <br />
+            Support
+        </p>
+        <h4>OAO</h4>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 160%;
+            font-size: 14px;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Dear {{ first_name }},</p>
+    <p>
+        It was a great pleasure to kick-off our OAO x {{company_name}}
+        program with you and we are excited to inviting you to our program
+        – putting you in the driver’s seat of {{company_name}}’s data-& AI-driven transformation!
+    </p>
+    <p>
+        We have created an account for you to access the <strong>OAO Learner Portal
+            – your one-stop-shop for the program</strong>. The program consists of three
+        training sessions of 1 hour each – you have the freedom to decide when
+        you want to attend the trainings, but should have completed them by {{survey_campaign_end_date}}.
+        As a first step, please schedule your preferred training dates 
+        <strong><a href="{{ url_with_token }}"> here</a></strong>.
+    </p>
+    <h4>
+        How to access the Platform?
+    </h4>
+    <p>
+        You can find the platform at <strong><a href="{{ url_with_token }}">{{ survey_url }}</a></strong>
+        <br />
+        E-Mail: Your {{company_name}} E-Mail
+    </p>
+    <p style="margin-top: 16px;">
+        Should you encounter any difficulties or require further assistance, please feel free to reach out.
+        Our team is always on hand to provide the support you need. Let’s build a {{company_name}} community
+        of Data Enthusiasts!
+    </p>
+    <br />
+    <p style="opacity: 0.7;">
+        Best,
+        <br />
+        René
+        <h4>OAO</h4>
+    </p>
+</body>
+</html>

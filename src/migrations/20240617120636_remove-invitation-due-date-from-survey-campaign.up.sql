@@ -1,0 +1,2 @@
+ALTER TABLE survey_campaigns
+DROP COLUMN invitation_sending_due_date;

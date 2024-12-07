@@ -1,0 +1,2 @@
+ALTER TABLE report_kpis
+ADD COLUMN business_unit_id INTEGER DEFAULT NULL

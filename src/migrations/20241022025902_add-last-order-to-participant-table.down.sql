@@ -1,0 +1,2 @@
+ALTER TABLE survey_campaign_employees
+DROP COLUMN last_answered_module_order;
